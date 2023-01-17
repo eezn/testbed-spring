@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.eezn.mybatis.mapper.EmployeeMapper">
+
+    <!--  resultMap  -->
+    <resultMap id="employeeMap" type="net.eezn.mybatis.model.Employee">
+        <id column="id" property="id"/>
+        <result column="company_id" property="companyId"/>
+        <result column="employee_name" property="name"/>
+        <result column="employee_address" property="address"/>
+    </resultMap>
+
+    <!--  INSERT  -->
+    <insert id="insert"
+            parameterType="net.eezn.mybatis.model.Employee"
+            useGeneratedKeys="true"
+            keyProperty="id">
+        INSERT INTO employee(company_id,
+                             employee_name,
+                             employee_address)
+        VALUES (#{employee.companyId},
+                #{employee.name},
+                #{employee.address})
+    </insert>
+
+    <!--  SELECT  -->
+    <select id="getById"
+            resultMap="employeeMap"
+            parameterType="int">
+        SELECT *
+        FROM employee
+        WHERE id = #{id}
+    </select>
+
+    <!--  SELECT  -->
+    <select id="getAll"
+            resultMap="employeeMap"
+            parameterType="net.eezn.mybatis.model.Employee">
+        SELECT *
+        FROM employee
+    </select>
+
+    <!--  SELECT  -->
+    <select id="getByCompanyId"
+            resultMap="employeeMap"
+            parameterType="list">
+        SELECT *
+        FROM employee
+        WHERE company_id = #{companyId}
+    </select>
+
+</mapper>
