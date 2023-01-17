@@ -1,3 +1,4 @@
 rootProject.name = 'testbed-spring'
-include 'mybatis-sample'
+include 'sample-mybatis'
+include 'sample-jpa'
 

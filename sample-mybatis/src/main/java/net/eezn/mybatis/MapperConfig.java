@@ -12,7 +12,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import javax.sql.DataSource;
 
 @Configuration
-public class MybatisConfig {
+public class MapperConfig {
 
     @Bean
     @ConfigurationProperties(prefix = "mybatis.configuration")
