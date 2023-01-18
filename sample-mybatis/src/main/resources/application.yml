@@ -2,15 +2,15 @@ server:
   port: 8080
 
 spring:
-  h2:
-    console:
-      enabled: true
-      path: /h2
   datasource:
     embedded-database-connection: h2
   sql:
     init:
       schema-locations: classpath:ddl/schema.sql
+  h2:
+    console:
+      enabled: true
+      path: /h2
 
 mybatis:
   mapper-locations:
