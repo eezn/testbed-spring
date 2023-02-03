@@ -9,8 +9,16 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.7.7/483f6acb3b0aff6c3d3dc99e8b8f390fa893d0a2/spring-boot-configuration-processor-2.7.7.jar" />
         </processorPath>
-        <module name="net.eezn.testbed-spring.sample-jpa.main" />
         <module name="net.eezn.testbed-spring.sample-mybatis.main" />
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct-processor/1.4.2.Final/e55bd90d51cddd638c07d5bd89fc7535d4e3d069/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.7.7/483f6acb3b0aff6c3d3dc99e8b8f390fa893d0a2/spring-boot-configuration-processor-2.7.7.jar" />
+        </processorPath>
+        <module name="net.eezn.testbed-spring.sample-jpa.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />

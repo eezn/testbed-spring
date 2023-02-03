@@ -4,13 +4,13 @@ server:
 spring:
   datasource:
     embedded-database-connection: h2
-#  sql:
-#    init:
-#      schema-locations: classpath:ddl/schema.sql
   h2:
     console:
       enabled: true
       path: /h2
+#  sql:
+#    init:
+#      schema-locations: classpath:ddl/schema.sql
 
   jpa:
     database: h2

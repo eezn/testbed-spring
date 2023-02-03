@@ -19,10 +19,10 @@
             parameterType="net.eezn.mybatis.model.Company"
             useGeneratedKeys="true"
             keyProperty="id">
-        INSERT INTO company(company_name,
+        INSERT INTO companyEntity(company_name,
                              company_address)
-        VALUES (#{company.name},
-                #{company.address})
+        VALUES (#{companyEntity.name},
+                #{companyEntity.address})
     </insert>
 
     <!--  SELECT  -->
@@ -30,7 +30,7 @@
             resultMap="companyMap"
             parameterType="int">
         SELECT *
-        FROM company
+        FROM companyEntity
         WHERE id = #{id}
     </select>
 
@@ -39,7 +39,7 @@
             resultMap="companyMap"
             parameterType="net.eezn.mybatis.model.Company">
         SELECT *
-        FROM company
+        FROM companyEntity
     </select>
 
 </mapper>

@@ -1,4 +1,14 @@
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
 dependencies {
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+    runtimeOnly 'com.h2database:h2'
+
+    implementation 'junit:junit:4.13.1'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
