@@ -1,3 +1,3 @@
 # testbed-spring
-## sample-jpa
-## sample-mybatis
+- sample-jpa
+- sample-mybatis
